@@ -13,10 +13,30 @@ window.addEventListener("load", () =>
     console.log("hello world");
   }
   someNewFunction();
+
+  // the forEach() method
+  const scores = [88, 90, 92];
+  for(let x = 0; x < scores.length; x++)
+  {
+    console.log(scores[x]);
+  }
+  scores.forEach((ce, i) => 
+  {
+    console.log(ce, i)
+  });
+
+  const fruitList = document.querySelector("ul.fruits");
+  console.log(fruitList);
+  const btn1 = document.querySelector("#btn1");
+  console.log(btn1);
 })
     </script>
   </head>
   <body>
-    
+    <ul class="fruits">
+      <li></li>
+      <li></li>
+    </ul>
+    <input type="button" id="btn1" value="butt in 1">
   </body>
 </html>
