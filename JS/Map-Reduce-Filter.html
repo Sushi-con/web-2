@@ -42,6 +42,7 @@ const employeeNames = employees.map(e=>e.firstName+" "+e.lastName);
 console.log(employeeNames)
 
 
+console.log(scores.map(s=>s*2))
 
 		//////////////////////////////
 		// filter() returns a new array that is a subset of the original array
@@ -62,23 +63,18 @@ console.log(highestPayedEmp);
 		//////////////////////////////
 
 		// get the sum of all scores
-const sumOfAllScores = scores.reduce((s,ce)=>s+ce,0);//what dose the 0 do?
-console.log(sumOfAllScores);
+console.log(scores.reduce((ac,ce)=>ac+ce,0))
 
 		// get the highest score
-const highestScore = scores.reduce((max,ce)=>Math.max(max,ce),0)
-console.log(highestScore);
-
+console.log(scores.reduce((ac,ce)=>ce>ac?ce:ac,0))
 
 		// get the max salary of all employees
-const maxSalary = employees.reduce((max,ce)=>max+ce.salary,0);
-console.log(maxSalary);
+console.log(employees.reduce((ac,ce)=>ce.salary>ac?ce.salary:ac,0))
 
 
 		// get the employee with the max salary
+		console.log(employees.reduce((ac,ce)=>ce.salary>ac?ce:ac,employees[0]))
 
-const maxEmpSalary = employees.reduce((sal,ce)=>Math.max(sal,ce.salary),0)
-console.log(maxEmpSalary);
 
 		////////////////////////////////
 		// Chaining Array Methods

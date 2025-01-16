@@ -66,24 +66,31 @@
 		console.log("PROBLEM 5");
 		// Write code that figures out the average hours of sleep I got last week
 		// Then console log the result
-		let hourstotal;
+		let hoursTotal;
 		hoursOfSleep.forEach((ce,i)=>{
-			
+			ce+=hoursOfSleep;
 		})
+		console.log(hoursTotal);
 
 		console.log("PROBLEM 6");
 		// Write code that figures out the most sleep I got for one night last week
-		
-
+		let max = 0;
+		hoursOfSleep.forEach(ce=>{
+			if(ce > max)
+			{
+				max = ce
+			}
+		})
+console.log(max)
 		console.log("PROBLEM 7");
 		// Console log the index of the highest value in the the hoursOfSleep array
-		
+console.log(hoursOfSleep.indexOf(max));
 		
 		console.log("PROBLEM 8");
 		// Write code that determines if "Vanilla" is in the flavors array
 		// If it is in the array console log "Vanilla is in the array!"
 		// If it is NOT in the array console log "Vanilla is NOT in the array!"
-
+		console.log(flavors.includes("Vanilla")?"vanilla is included":"it is not");
 
 		console.log("PROBLEM 9");
 		// Use the push() method to add "Chocolate Chip" to the array of flavors
@@ -130,12 +137,19 @@
 		// AND console log the flavors array
 
 
-		console.log("PROBLEM 17");
+		console.log("BONUS");
 		// Write code that figures out which basketball player scored the most total points
 		// Then console log the name of the player
+		const highestScore = basketballPlayers[0]
+		basketballPlayers.forEach(p=>{
+			if(p.totalPoints > highestScore.totalPoints)
+			{
+				highestScore = p;
+			}
+		})
+		console.log(highestScore.name);
 
-
-		console.log("PROBLEM 18");
+		console.log("BONUS");
 		// Write code that figures out how many basketball players are in the hall of fame
 		// then console log the result
 
