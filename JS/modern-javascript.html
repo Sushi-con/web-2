@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modern js</title>
+    <script>
+window.addEventListener("load", () => 
+{
+  // Arrow function
+  const someNewFunction = () => 
+  {
+    console.log("hello world");
+  }
+  someNewFunction();
+
+  // the forEach() method
+  const scores = [88, 90, 92];
+  for(let x = 0; x < scores.length; x++)
+  {
+    console.log(scores[x]);
+  }
+  scores.forEach((ce, i) => 
+  {
+    console.log(ce, i)
+  });
+  //query selector
+  const fruitList = document.querySelector("ul.fruits");
+  console.log(fruitList);
+  const btn1 = document.querySelector("#btn1");
+  console.log(btn1);
+
+  // arrow abreviation
+  const someArray = ["bob","sally","bolly"];
+  someArray.forEach((ce)=>{console.log(ce)});
+  someArray.forEach(ce=>{console.log(ce)}); //omit () if only one peramiter
+  someArray.forEach(ce=>console.log(ce)); //one statment = omit {}
+  //body = one statment with return - omit return must omit {} aswell
+  
+  // const matchName = someArray.find((ce)=>{return ce === "bob" });
+  const matchName = someArray.find(ce=>ce === "bob");
+  const isEven=number=>number %2===0;
+
+
+});
+    </script>
+  </head>
+  <body>
+    <ul class="fruits">
+      <li></li>
+      <li></li>
+    </ul>
+    <input type="button" id="btn1" value="butt in 1">
+  </body>
+</html>

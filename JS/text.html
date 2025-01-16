@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <script>
+
+    const someArray = [1,2,3];
+    const someObject = {name:"Bob", age:22};
+
+    for(let x = 0; x < someArray.length; x++)
+    {
+      console.log(someArray[x]);
+    }
+
+    someArray.forEach((ce)=>{console.log(ce)});
+
+    for(let key in someObject)
+    {
+      console.log(key);
+      console.log(someObject[key]);
+    }
+
+    const color = prompt("enter a color")
+    switch(color){
+      case "red":
+        console.log("roses")
+        break;
+      case "blue":
+        console.log("sky")
+        break;
+      default:
+        console.log("some other color")
+    }
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
